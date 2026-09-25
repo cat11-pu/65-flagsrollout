@@ -1,0 +1,14 @@
+{
+  "no_snapshot_code": "E_NO_SNAPSHOT",
+  "bucket_count": 10,
+  "flags": [
+    {"id": "f0", "percent": 50, "version": 2},
+    {"id": "f1", "percent": 30, "version": 1}
+  ],
+  "users": [{"id": "u0"}, {"id": "u1"}, {"id": "u2"}, {"id": "u3"}],
+  "snapshots": [
+    {"version": 1, "percent": {"f0": 20, "f1": 30}},
+    {"version": 2, "percent": {"f0": 50, "f1": 30}}
+  ],
+  "salt": "gsb"
+}
