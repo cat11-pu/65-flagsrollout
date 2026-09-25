@@ -13,10 +13,10 @@ const evaluated = evaluate(spec.flags, spec.users, spec.bucket_count);
 const checked = consistent(spec.flags, spec.users, spec.snapshots || [], spec.bucket_count);
 const view = render(spec);
 
-emit("每个用户的取值 =", JSON.stringify(evaluated.values));
-emit("每个用户的分桶 =", JSON.stringify(evaluated.buckets));
+emit("每个用户的取值 =", evaluated.values);
+emit("每个用户的分桶 =", evaluated.buckets);
 emit("同一快照下是否稳定 =", checked.stable);
-emit("跨快照变化的用户 =", JSON.stringify(checked.changed));
+emit("跨快照变化的用户 =", checked.changed);
 emit("使用的快照版本 =", checked.version);
 emit("分桶数 =", spec.bucket_count);
 
